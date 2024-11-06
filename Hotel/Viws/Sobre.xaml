@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Hotel.Viws.Sobre"
+             Title="Sobre"
+             NavigationPage.HasNavigationBar="False" 
+             BackgroundColor="{StaticResource MidnightBlue }"> 
+    
+    <VerticalStackLayout>
+
+       
+        <Label Padding="70" Text="Sobre o Aplicativo" 
+                  FontFamily="Kalam"
+                  FontSize="30"
+                  TextColor="{StaticResource  Magenta}"
+                  VerticalOptions="Center" 
+                  HorizontalOptions="Center"/>
+
+        <Label Text= "  ' Buscador de hospedagem facilitado para quem busca a melhor comodidade e estadia em poucos clicks.'"
+                TextColor="White"
+                FontSize="15"
+                HorizontalOptions="Center"
+                VerticalOptions="Center"
+               Margin="55,20,50,170"/>
+        
+        <Label Text= "Feito com ❤ por : "
+               TextColor="White"
+               FontSize="12"
+               HorizontalOptions="Center"
+               />
+
+        <Label Text= "Carla Roberta Pereira"
+               TextColor="White"
+               FontSize="11"
+               HorizontalOptions="Center"
+               Padding="1"/>      
+
+              <Label Text="©2024"
+               TextColor="White"
+               FontSize="11"
+               HorizontalOptions="Center"/>
+
+        <Label Text="" Padding="1"/>
+        
+        <Button Text="Voltar"
+                HorizontalOptions="Center"
+                Clicked="Button_Clicked" />
+
+       
+
+
+    </VerticalStackLayout>
+</ContentPage>

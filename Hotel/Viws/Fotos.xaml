@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Hotel.Viws.Fotos"
+             NavigationPage.HasNavigationBar="False" 
+             BackgroundColor="{StaticResource MidnightBlue }">
+
+    <VerticalStackLayout >
+        <Label Margin=" 10"
+               Text="Fotos dos Quartos" 
+               FontFamily="Kalam"
+               FontSize="Large"
+               TextColor="{StaticResource  Magenta}"
+               VerticalOptions="Center" 
+               HorizontalOptions="Center"/>
+        
+        <Label Text="Suíte Super Luxo"   
+           HorizontalOptions="Center"
+           VerticalOptions="Center" 
+           TextColor="White"
+           FontSize="Subtitle"/>
+        <Image Source="super_luxo.webp"        
+           WidthRequest="100"
+           HeightRequest="100"
+           HorizontalOptions="Center"
+           VerticalOptions="Center"/>
+
+        <Label Text="Suíte Luxo"   
+           HorizontalOptions="Center"
+           VerticalOptions="Center" 
+           TextColor="White" 
+           FontSize="Subtitle"/>
+        <Image Source="luxo.jpg"        
+           WidthRequest="100"
+           HeightRequest="100"
+           HorizontalOptions="Center"
+            VerticalOptions="Center"/>
+
+        <Label Text="Suíte Single"   
+              HorizontalOptions="Center"
+              VerticalOptions="Center" 
+              TextColor="White" 
+              FontSize="Subtitle"/>
+        <Image Source="single.jpg"        
+              WidthRequest="100"
+              HeightRequest="100"
+              HorizontalOptions="Center"
+              VerticalOptions="Center"/>
+
+        <Label Text="Suíte Crise"   
+              HorizontalOptions="Center"
+              VerticalOptions="Center" 
+              TextColor="White" 
+              FontSize="Subtitle"/>
+        <Image Source="crise.jpg"        
+              WidthRequest="10"
+              HeightRequest="10"
+              HorizontalOptions="Center"
+              VerticalOptions="Center"/>
+
+        <Button Text="Voltar"
+        HorizontalOptions="Center"
+        Clicked="Button_Clicked" />
+
+
+
+
+    </VerticalStackLayout>
+</ContentPage>
