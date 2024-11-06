@@ -7,7 +7,7 @@
 
     <VerticalStackLayout >
         <Label Margin=" 10"
-               Text="Fotos dos Quartos" 
+               Text="Fotos das Swítes" 
                FontFamily="Kalam"
                FontSize="Large"
                TextColor="{StaticResource  Magenta}"
@@ -50,7 +50,7 @@
         <Label Text="Suíte Crise"   
               HorizontalOptions="Center"
               VerticalOptions="Center" 
-              TextColor="White" 
+              TextColor="{StaticResource MidnightBlue }" 
               FontSize="Subtitle"/>
         <Image Source="crise.jpg"        
               WidthRequest="10"
