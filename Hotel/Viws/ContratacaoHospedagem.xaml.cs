@@ -39,19 +39,21 @@ public partial class ContratacaoHospedagem : ContentPage
           
      }
 
-    private void dtpck_checkin_DateSelected(object sender, DateChangedEventArgs e) // para não dar bug no check-in
-    {
-        DatePicker elemento = sender as DatePicker;
+     
+private void dtpck_checkin_DateSelected(object sender, DateChangedEventArgs e)
+{
+        // para não dar bug no check-in
+        
+            DatePicker elemento = sender as DatePicker;
 
-        DateTime data_selecionada_checkin = elemento.Date;
+            DateTime data_selecionada_checkin = elemento.Date;
 
-        dtpck_checkout.MaximumDate = data_selecionada_checkin.AddDays(1);
-        dtpck_checkout.MaximumDate = data_selecionada_checkin.AddMonths(6);
+            dtpck_checkout.MinimumDate = data_selecionada_checkin.AddDays(1);
+            dtpck_checkout.MaximumDate = data_selecionada_checkin.AddMonths(6);
+        
+}
 
-
-    }
-
-    private void Button_Clicked_2(object sender, EventArgs e)
+private void Button_Clicked_2(object sender, EventArgs e)
     {
         try
         {
