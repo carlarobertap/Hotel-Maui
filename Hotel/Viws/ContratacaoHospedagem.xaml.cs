@@ -1,3 +1,5 @@
+using Hotel.Models;
+
 namespace Hotel.Viws;
 
 public partial class ContratacaoHospedagem : ContentPage
@@ -5,13 +7,19 @@ public partial class ContratacaoHospedagem : ContentPage
 
     App PropriedadesApp;
 
-	public ContratacaoHospedagem()
+    public Quarto QuartoSelecionado { get; private set; }
+    public int QntAdultos { get; private set; }
+    public int QntCriancas { get; private set; }
+    public DateTime DataCheckin { get; private set; }
+    public DateTime Datacheckout { get; private set; }
+
+    public ContratacaoHospedagem()
 	{
 		InitializeComponent();
 
         PropriedadesApp = (App)Application.Current;
 
-        pck_quarto.ItemsSource = PropriedadesApp.Lista_quartos;
+        pck_quarto.ItemsSource = PropriedadesApp.lista_quartos;
 
         dtpck_checkin.MinimumDate = DateTime.Now;
         dtpck_checkin.MaximumDate = new DateTime(DateTime.Now.Year, DateTime.Now.Month + 1, DateTime.Now.Day);
@@ -25,15 +33,28 @@ public partial class ContratacaoHospedagem : ContentPage
 		await Navigation.PushAsync(new Sobre()); // botão sobre
     }
 
-    private void Button_Clicked_1(object sender, EventArgs e)
+    private async void Button_Clicked_1(object sender, EventArgs e)
     {
         try
         {
-            Navigation.PushAsync(new HospedagemContratada()); //botão avançar
+            Hospedagem h = new Hospedagem
+            {
+                QuartoSelecionado = (Quarto)pck_quarto.SelectedItem,
+                QntAdultos = Convert.ToInt32(stp_adultos.Value),
+                QntCriancas = Convert.ToInt32(stp_crianças.Value),
+                DataCheckin = dtpck_checkin.Date,
+                Datacheckout = dtpck_checkout.Date,
+            };
+
+
+            await Navigation.PushAsync(new HospedagemContratada() //botão avançar
+            {
+                BindingContext = h
+            });
 
         } catch (Exception ex)
         {
-            DisplayAlert("Ops", ex.Message, "Ok");
+            await DisplayAlert("Ops", ex.Message, "Ok");
         }
 
           

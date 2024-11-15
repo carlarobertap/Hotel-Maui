@@ -62,7 +62,7 @@
                            Text="{Binding Value}" 
                            BindingContext="{x:Reference stp_crianças}"/>
 
-                    <Stepper Grid.Row="1" Grid.Column="2"
+                    <Stepper Grid.Row="1" Grid.Column= "2"
                              x:Name="stp_crianças"
                              Minimum="0"
                              Maximum="10"
@@ -70,7 +70,7 @@
 
                 </Grid>
 
-                <Label Text="Escolha sua Suíte"/>
+                <Label Text= "Escolha sua Suíte"/>
 
                 <Picker x:Name="pck_quarto"
                         Title="Selecione sua Acomodação"
@@ -81,20 +81,20 @@
                     
                     <VerticalStackLayout>
                         
-                        <Label Text="Período da Estadia" />
+                        <Label Text= "Período da Estadia" />
                         
                         <HorizontalStackLayout>
                             <Label Text="Check-in:" />
                             <DatePicker x:Name="dtpck_checkin" 
-                                        DateSelected="dtpck_checkin_DateSelected"
-                                        Format="dd/MM/yyy" />
+                                        DateSelected= "dtpck_checkin_DateSelected"
+                                        Format= "dd/MM/yyy" />
 
                         </HorizontalStackLayout>
 
                         <HorizontalStackLayout>
                             <Label Text="Check-out:" />
-                            <DatePicker x:Name="dtpck_checkout" 
-                                        Format="dd/MM/yyy" />
+                            <DatePicker x:Name= "dtpck_checkout" 
+                                        Format= "dd/MM/yyy" />
                         </HorizontalStackLayout>
                         
                     </VerticalStackLayout>
